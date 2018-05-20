@@ -41,8 +41,11 @@ class UploadController extends Controller
         var_dump($_GET);
     }
 
-    public function test()
+    public function test($id)
     {
-        echo 'test';
+        if($id > 10){
+            return true;
+        }
+        return false;
     }
 }
