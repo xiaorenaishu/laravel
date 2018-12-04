@@ -37,11 +37,14 @@ class demo extends Command
      */
     public function handle()
     {
+        logger(date('Y-m-d H:i:s'), [1, 3, 4]);
+//        (date('Y-m-d H:i:s'));
         //
-        $this->consumer();
+//        $this->consumer();
     }
 
-    protected function producer(){
+    protected function producer()
+    {
 
     }
 
@@ -57,7 +60,7 @@ class demo extends Command
 //$config->setOffsetReset('earliest');
         $consumer = new \Kafka\Consumer();
 //$consumer->setLogger($logger);
-        $consumer->start(function($topic, $part, $message) {
+        $consumer->start(function ($topic, $part, $message) {
             var_dump($topic);
             var_dump($part);
             var_dump($message);

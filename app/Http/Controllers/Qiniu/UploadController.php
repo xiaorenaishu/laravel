@@ -25,12 +25,12 @@ class UploadController extends Controller
     {
         // 初始化签权对象
         $auth   = new Auth($this->accessKey, $this->secretKey);
-        $bucket = 'chenxinren';
+        $bucket = 'chenxinren2'; //空间bucket
         // 生成上传Token
         $token = $auth->uploadToken($bucket);
         return [
             'token'  => $token,
-            'domain' => 'p8susbx7x.bkt.clouddn.com'
+            'domain' => 'pizjl8zaq.bkt.clouddn.com'  //测试用的临时域名，有效期1个月
         ];
         die;
     }
