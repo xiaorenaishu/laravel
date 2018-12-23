@@ -14,10 +14,10 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
-        Commands\demo::class,
-        Commands\producer::class,
-        Commands\consumer::class,
+        //5.5版本之后不用加一下的映射
+//        Commands\demo::class,
+//        Commands\producer::class,
+//        Commands\consumer::class,
     ];
 
     /**

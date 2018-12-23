@@ -15,12 +15,12 @@ Route::group(['prefix' => 'admin'], function (){
     Route::get('/student/index', 'Admin\Student\StudentController@index');
     Route::get('/student/update/{id}', 'Admin\Student\StudentController@update');
     Route::get('/student/delete/{id}', 'Admin\Student\StudentController@delete');
-    Route::match(['get', 'post'], '/student/create', ['as' => 'student_create', 'uses' => 'Admin\Student\StudentController@create']);
+//    Route::match(['get', 'post'], '/student/create', ['as' => 'student_create', 'uses' => 'Admin\Student\StudentController@create']);
 });
 //
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 //
 //Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 //{
@@ -49,6 +49,6 @@ Route::group(['prefix' => 'admin'], function (){
 //    $ctrl = \App::make("\\App\\Http\\Controllers\\" . $module . "\\" . $class . "Controller");
 //    return \App::call([$ctrl, $action]);
 //});
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

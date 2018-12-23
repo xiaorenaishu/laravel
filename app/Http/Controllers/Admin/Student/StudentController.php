@@ -19,7 +19,7 @@ class StudentController extends Controller
         $count = $request->input('count') ?? 2;
         $list = Student::orderBy('id', 'desc')->paginate($count);
 
-        $this->sendJob();
+//        $this->sendJob();
 
         return view('student.index', ['students' => $list]);
     }

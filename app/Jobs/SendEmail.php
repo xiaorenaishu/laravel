@@ -36,4 +36,9 @@ class SendEmail implements ShouldQueue
         //
         \Log::info('send_sync', $this->data);
     }
+
+    public function failed(\Exception $e)
+    {
+        //job执行失败后会执行的函数
+    }
 }
